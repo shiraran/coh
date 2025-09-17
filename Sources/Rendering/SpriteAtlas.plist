@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>metadata</key>
+    <dict>
+        <key>format</key>
+        <integer>3</integer>
+        <key>textureFileName</key>
+        <string>Sprites.png</string>
+    </dict>
+    <key>frames</key>
+    <dict>
+        <!-- TODO: Populate atlas entries when art is available. -->
+    </dict>
+</dict>
+</plist>

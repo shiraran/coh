@@ -1,0 +1,51 @@
+name: ChainbladeTactics
+options:
+  minimumXcodeGenVersion: 2.38.0
+  deploymentTarget:
+    iOS: "16.0"
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    PRODUCT_BUNDLE_IDENTIFIER: "com.example.chainbladetactics"
+    TARGETED_DEVICE_FAMILY: "1"
+    UIUserInterfaceStyle: Light
+targets:
+  ChainbladeTactics:
+    type: application
+    platform: iOS
+    settings:
+      INFOPLIST_FILE: Sources/App/Info.plist
+      UILaunchStoryboardName: LaunchScreen
+      UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
+      UISupportedInterfaceOrientations~ipad: UIInterfaceOrientationPortrait
+    sources:
+      - path: Sources/App
+      - path: Sources/Core
+      - path: Sources/Scenes
+      - path: Sources/Rendering
+      - path: Sources/Data
+      - path: Sources/Audio
+    resources:
+      - path: Assets
+    dependencies:
+      []
+  ChainbladeTacticsTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: Tests
+    dependencies:
+      - target: ChainbladeTactics
+schemes:
+  ChainbladeTactics:
+    build:
+      targets:
+        ChainbladeTactics: all
+    test:
+      targets:
+        - name: ChainbladeTacticsTests
+          parallelizable: true
+    run:
+      config: Debug
+    archive:
+      config: Release
